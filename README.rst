@@ -1,5 +1,5 @@
 =============
-Stroop_Effect
+Stroop Effect
 =============
 
 A statistical analysis of a classic experiment
@@ -25,11 +25,11 @@ The dependent variable is the time a participant takes to respond. This is a qua
 
 ..math::
 
-    \begin{align*}
     H_0 & : h_1(t) = h_0(t),   \qquad \text{for all $t \in[0,\tau]$}
-    \\
+
+..math::
+
     H_a & : h_1
-    \end{align*}
 
 The alternative hypothesis is that the if the data is presented in incongruent form the time taken to read through the list will be greater than the time taken when the data is presented in congruent form.
 
@@ -52,7 +52,19 @@ Include at least one measure of central tendency and at least one measure of var
 4. Visualizations the distribution of the sample data 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Write one or two sentences noting what you observe about the plot or plots.
+A histogram can display the distribution of results from each experiment. This is combine with a faint
+rug plot to highlight where the individual values occur along the x-axis and kernel density estimation to
+highlight the distribution of values. Both figures are plotted using the same x-axis.
+
+.. image:: resources\images\Congruent_hist.png
+   :scale: 100 %
+
+.. image:: resources\images\Incongruent_hist.png
+   :scale: 100 %
+
+The first thing that stands out is the genereal different in time between Congruent and Incongruent.
+
+Compared to the descriptive statistics this helps highlight the distribution of the values more clearly.
 
 5. Statistical testing and results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
