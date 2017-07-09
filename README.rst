@@ -10,7 +10,7 @@ ______________________
 
 In a Stroop task, participants are presented with a list of words, with each word displayed in a color of ink. The participant’s task is to say out loud the color of the ink in which the word is printed. The task has two conditions: a congruent words condition, and an incongruent words condition. In the congruent words condition, the words being displayed are color words whose names match the colors in which they are printed: for example RED, BLUE. In the incongruent words condition, the words displayed are color words whose names do not match the colors in which they are printed: for example PURPLE, ORANGE. In each case, we measure the time it takes to name the ink colors in equally-sized lists. Each participant will go through and record a time from each condition.
 
-Try it out 'here <https://faculty.washington.edu/chudler/java/ready.html>'_
+Try it out `here <https://faculty.washington.edu/chudler/java/ready.html>`_
 
 1. What is our independent variable. What is our dependent variable
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -23,7 +23,7 @@ The dependent variable is the time a participant takes to respond. This is a qua
 2. Hypotheses for this task
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..math
+..math::
 
     \begin{align*}
     H_0 & : h_1(t) = h_0(t),   \qquad \text{for all $t \in[0,\tau]$}
@@ -67,5 +67,5 @@ Can you think of an alternative or similar task that would result in a similar e
 Resources used
 --------------
 
-'Latex symbols <https://www.scribd.com/doc/6328774/LaTeX-Mathematical-Symbols>'_
+`Latex symbols <https://www.scribd.com/doc/6328774/LaTeX-Mathematical-Symbols>`_
 
