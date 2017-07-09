@@ -52,8 +52,8 @@ Include at least one measure of central tendency and at least one measure of var
 4. Visualizations the distribution of the sample data 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A histogram can display the distribution of results from each experiment. This is combine with a faint
-rug plot to highlight where the individual values occur along the x-axis and kernel density estimation to
+A histogram can display the distribution of results from each experiment. This is combined with a faint
+rug plot (showing small vertical ticks along the x-axis) to highlight where the individual values occur along the x-axis and kernel density estimation to
 highlight the distribution of values. Both figures are plotted using the same x-axis.
 
 .. image:: resources\images\Congruent_hist.png
