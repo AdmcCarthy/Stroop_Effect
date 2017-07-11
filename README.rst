@@ -25,21 +25,21 @@ The dependent variable is the time a participant takes to respond. This is a qua
 
 ..math::
 
-     \alpha
+     \\alpha
 
 ..math::
 
-    deﬁne \def\mathbi#1{\textbf{\em #1}}
+    deﬁne \\def\\mathbi#1{\\textbf{\\em #1}}
 
-    $\mathbi{H}$
-
-..math::
-
-    $\mathbi{H}$_{0} :
+    \\mathbi{H}
 
 ..math::
 
-    $\mathbi{H}$_{1} :
+    \\mathbi{H}$_{0} :
+
+..math::
+
+    $\\mathbi{H}$_{1} :
 
 The alternative hypothesis is that the if the data is presented in incongruent form the time taken to read through the list will be greater than the time taken when the data is presented in congruent form.
 
