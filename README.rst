@@ -23,21 +23,21 @@ The dependent variable is the time a participant takes to respond. This is a qua
 2. Hypotheses for this task
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..math::
+.. math::
 
      \\alpha
 
-..math::
+.. math::
 
     deﬁne \\def\\mathbi#1{\\textbf{\\em #1}}
 
     \\mathbi{H}
 
-..math::
+.. math::
 
     \\mathbi{H}$_{0} :
 
-..math::
+.. math::
 
     $\\mathbi{H}$_{1} :
 
@@ -63,6 +63,8 @@ What was the sampling method of participants to the experiment, will they give a
 
 .. image:: resources\images\descriptive_statistics.png
    :scale: 100 %
+
+There are no times that a participants congruent test results are a shorter response time than their incongruent response time.
 
 4. Visualizations the distribution of the sample data 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
