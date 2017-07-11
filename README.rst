@@ -83,10 +83,24 @@ The first thing that stands out is the genereal different in time between Congru
 
 Compared to the descriptive statistics this helps highlight the distribution of the values more clearly.
 
+Q-Q(Quantile Quantile) plots typically need around 1000 samples but still form an interesting way to compare samples to an
+ideal distribution.
+
+.. image:: resources\images\Congruent_QQ.png
+   :scale: 100 %
+
+.. image:: resources\images\Incongruent_QQ.png
+   :scale: 100 %
+
 5. Statistical testing and results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 What is your confidence level and your critical statistic value? Do you reject the null hypothesis or fail to reject it? Come to a conclusion in terms of the experiment task. Did the results match up with your expectations?
+
+A QQ plot of the two variables gives an overview of how two distributions are related.
+
+.. image:: resources\images\QQ_plot.png
+   :scale: 100 %
 
 6. What is responsible for the effects observed 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
