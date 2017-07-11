@@ -2,6 +2,8 @@
 
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np
+from scipy import stats
 
 # Color schemes
 b_and_w = ['#D5D5D5', '#9099A2', '#6D7993', '#96858F']
@@ -177,3 +179,85 @@ def boolean_bar(data, name, color_set=custom, ax_size=(2, 5), funky=False, annot
                         color=color_set[0])
 
     return fig
+
+
+def qq_plot(data, name, distribution="norm", ax_size=(7, 7)):
+    """Plot a qq plot using one data value against a
+    known distribution.
+    """
+    
+    common_set_up(ax_size)
+
+    fig = plt.figure(figsize=ax_size)
+    ax = fig.add_subplot(111)
+
+    # Use stats function and get out values
+    (x, y) = stats.probplot(data, dist=distribution, plot=None, fit=False)
+    
+    # Add a best fit line
+    slope, intercept, r, prob, sterrest = stats.linregress(x, y)
+    ax.plot(x, (slope*x + intercept), '#9099A2', 
+                linestyle='--', linewidth=1)
+    
+    ax.scatter(x, y, s=70, facecolors='none', edgecolors='#192231', linewidths=1.4)
+    
+    title_color = '#192231'
+    font_colour = '#9099A2'
+    
+    ax.set_title("Q-Q plot of {0}".format(name),
+                fontsize=20, color=title_color)
+    ax.set_ylabel('Quantiles of {0}'.format(name),
+                color=font_colour)
+    ax.set_xlabel('Quantiles of {0} dist.'.format(distribution),
+                   color=font_colour)
+    
+    sns.despine(ax=ax, offset=2, trim=True, left=True, bottom=True)
+
+
+def qq_plot_var(data_a, data_b, name_a, name_b, ax_size=(7, 7), fit_zero=True):
+    """Plot a qq plot using one data value against a
+    known distribution.
+    """
+    
+    common_set_up(ax_size)
+   
+    fig = plt.figure(figsize=ax_size)
+    ax = fig.add_subplot(111)
+    
+    x = []
+    for i in range(1, 100):
+        v = np.percentile(data_a, i)
+        x.append(v)
+        
+    y = []
+    for i in range(1, 100):
+        v = np.percentile(data_b, i)
+        y.append(v)
+    
+    # Plot a base line
+    ax.plot(x, (1*x), '#9099A2', 
+            linestyle='--', linewidth=1)
+    
+    ax.scatter(x, y, s=40, facecolors='none', edgecolors='#192231', linewidths=0.5)
+    
+    if max(x) < max(y):
+        upper = max(y)
+    else:
+        upper = max(x)
+    
+    if fit_zero:
+        axes = ax.axes
+        axes.set_xlim(0,)
+        axes.set_ylim(0,)
+    
+    title_color = '#192231'
+    font_colour = '#9099A2'
+    
+    ax.set_title("Q-Q plot of {0} vs {1}".format(name_a, name_b),
+                fontsize=20, color=title_color)
+    ax.set_ylabel('Quantiles of {0}'.format(name_b),
+                  color=font_colour)
+    ax.set_xlabel('Quantiles of {0}'.format(name_a),
+                   color=font_colour)
+    
+    sns.despine(ax=ax, offset=2, trim=True, left=True, bottom=True)
