@@ -61,7 +61,8 @@ What was the sampling method of participants to the experiment, will they give a
 3. Descriptive statistics regarding the dataset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Include at least one measure of central tendency and at least one measure of variability.
+.. image:: resources\images\descriptive_statistics.png
+   :scale: 100 %
 
 4. Visualizations the distribution of the sample data 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
