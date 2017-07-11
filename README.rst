@@ -8,7 +8,7 @@ A statistical analysis of a classic experiment
 Background Information
 ______________________
 
-In a Stroop task, participants are presented with a list of words, with each word displayed in a color of ink. The participant’s task is to say out loud the color of the ink in which the word is printed. The task has two conditions: a congruent words condition, and an incongruent words condition. In the congruent words condition, the words being displayed are color words whose names match the colors in which they are printed: for example RED, BLUE. In the incongruent words condition, the words displayed are color words whose names do not match the colors in which they are printed: for example PURPLE, ORANGE. In each case, we measure the time it takes to name the ink colors in equally-sized lists. Each participant will go through and record a time from each condition.
+In a Stroop task, participants are presented with a list of words, with each word displayed in a color of ink. The participant’s task is to say out loud the color of the ink in which the word is printed. The task has two conditions: a congruent words condition, and an incongruent words condition. In the congruent words condition, the words being displayed are color words whose names match the colors in which they are printed: for example RED (is red color), BLUE (is blue color). In the incongruent words condition, the words displayed are color words whose names do not match the colors in which they are printed: for example PURPLE (is red color), ORANGE (is blue color). In each case, we measure the time it takes to name the ink colors in equally-sized lists. Each participant will go through and record a time from each condition.
 
 Try it out `here <https://faculty.washington.edu/chudler/java/ready.html>`_
 
@@ -25,11 +25,21 @@ The dependent variable is the time a participant takes to respond. This is a qua
 
 ..math::
 
-    H_0 & : h_1(t) = h_0(t),   \qquad \text{for all $t \in[0,\tau]$}
+     \alpha
 
 ..math::
 
-    H_a & : h_1
+    deﬁne \def\mathbi#1{\textbf{\em #1}}
+
+    $\mathbi{H}$
+
+..math::
+
+    $\mathbi{H}$_{0} :
+
+..math::
+
+    $\mathbi{H}$_{1} :
 
 The alternative hypothesis is that the if the data is presented in incongruent form the time taken to read through the list will be greater than the time taken when the data is presented in congruent form.
 
@@ -43,17 +53,22 @@ A two tailed test can be selected in case the opposite of what is expected occur
 
 A limitations is the sample size, if this is large enough to give a significant response or if a larger dataset will be required.
 
+Another limitation is we have no information about the source of the data.
+
+What was the sampling method of participants to the experiment, will they give a random sample representative of the population?
+
 
 3. Descriptive statistics regarding the dataset
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Include at least one measure of central tendency and at least one measure of variability.
+.. image:: resources\images\descriptive_statistics.png
+   :scale: 100 %
 
 4. Visualizations the distribution of the sample data 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A histogram can display the distribution of results from each experiment. This is combine with a faint
-rug plot to highlight where the individual values occur along the x-axis and kernel density estimation to
+A histogram can display the distribution of results from each experiment. This is combined with a faint
+rug plot (showing small vertical ticks along the x-axis) to highlight where the individual values occur along the x-axis and kernel density estimation to
 highlight the distribution of values. Both figures are plotted using the same x-axis.
 
 .. image:: resources\images\Congruent_hist.png
@@ -81,3 +96,12 @@ Resources used
 
 `Latex symbols <https://www.scribd.com/doc/6328774/LaTeX-Mathematical-Symbols>`_
 
+`Matlibplot tex symbols <https://matplotlib.org/users/mathtext.html#mathtext-tutorial>`_
+
+`Matlibplot tables <http://matplotlib.org/devdocs/api/_as_gen/matplotlib.axes.Axes.table.html>`_
+
+`Change table cell properties <https://stackoverflow.com/questions/37554606/matplotlib-table-row-label-font-color-and-size>`_
+
+`Hypothesis testing forumla <https://en.wikipedia.org/wiki/Statistical_hypothesis_testing>`_
+
+`Auckland computational statistics lecture notes <https://www.stat.auckland.ac.nz/~ihaka/787/slides.html>`_
