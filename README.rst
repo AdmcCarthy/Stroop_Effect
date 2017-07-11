@@ -99,5 +99,8 @@ Resources used
 
 `Matlibplot tables <http://matplotlib.org/devdocs/api/_as_gen/matplotlib.axes.Axes.table.html>`_
 
+`Change table cell properties <https://stackoverflow.com/questions/37554606/matplotlib-table-row-label-font-color-and-size>`_
+
 `Hypothesis testing forumla <https://en.wikipedia.org/wiki/Statistical_hypothesis_testing>`_
 
+`Auckland computational statistics lecture notes <https://www.stat.auckland.ac.nz/~ihaka/787/slides.html>`_

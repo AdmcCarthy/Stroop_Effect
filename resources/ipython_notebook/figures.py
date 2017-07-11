@@ -137,3 +137,43 @@ def univariate(x, univariate_name, color_set=custom, bin_n='all_values', ax_size
     fig = formatting_text_box(fig, parameters, formatting_right)
 
     return fig
+
+
+def boolean_bar(data, name, color_set=custom, ax_size=(2, 5), funky=False, annotate=True):
+    """Make a univariate distribution
+    of a variable.
+
+    Returns an object to be plotted.
+    """
+
+    if funky:
+        color_set = ToddTerje
+
+    common_set_up(ax_size) # Apply basic plot style
+
+    fig = sns.countplot(data, saturation=1,
+                       color=color_set[2], label=name
+                      )
+
+    sns.despine(offset=2, trim=True, left=True, bottom=True)
+
+    # Set title and axes
+    title_color = '#192231'
+    fig.set_title('{0}'.format(name),
+                 fontsize=20, color=title_color)
+    fig.set_ylabel('')
+    fig.set_xlabel('')
+
+    # Percentage annotation
+    if annotate:
+        total = float(len(data))
+        for p in fig.patches:
+            fig.annotate('{:.2f}'.format((p.get_height()/total)), # Value to be anootated
+                        (
+                            p.get_x()+p.get_width()/2.,          # X position
+                            p.get_height()-1300                  # y position
+                        ),
+                        ha='center', label='Fraction',
+                        color=color_set[0])
+
+    return fig
