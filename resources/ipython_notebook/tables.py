@@ -196,11 +196,11 @@ def table_settings(axs_num, table_name):
     plt.setp([axs_num.get_xticklines(), axs_num.get_yticklines()], color="white")
 
 
-def descriptive_table(data, column_name):
+def descriptive_table(data, column_name, fig_size=(8, 8)):
     """Plots a table of descriptive statistics.
     """
     # Set up figure dimensions
-    sheet, axs = plt.subplots(4,1, figsize=(8, 8))
+    sheet, axs = plt.subplots(4,1, figsize=fig_size)
     gs = gridspec.GridSpec(4, 1, height_ratios=[2, 2, 5, 9])
     
     # Assign all subplots based on figure dimensions
