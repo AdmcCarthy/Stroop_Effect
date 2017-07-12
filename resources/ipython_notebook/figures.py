@@ -259,5 +259,7 @@ def qq_plot_var(data_a, data_b, name_a, name_b, ax_size=(7, 7), fit_zero=True):
                   color=font_colour)
     ax.set_xlabel('Quantiles of {0}'.format(name_a),
                    color=font_colour)
-    
+
     sns.despine(ax=ax, offset=2, trim=True, left=True, bottom=True)
+
+    return ax

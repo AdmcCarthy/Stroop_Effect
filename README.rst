@@ -15,31 +15,29 @@ Try it out `here <https://faculty.washington.edu/chudler/java/ready.html>`_
 1. What is our independent variable. What is our dependent variable
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Within subject design, where each subject is given two tests.
+
+This gives paired data (congruent vs. incogruent).
+
 The independent variable is nominal, categorical, representing the two experiment conditions incongruent vs congruent words condition. 
 
 The dependent variable is the time a participant takes to respond. This is a quantative temporal ratio data type.  
 
+So the two test results are dependent variables. 
 
 2. Hypotheses for this task
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Deoendent sample t-test.
+
+Repeated measures design.
 
 .. math::
 
      \\alpha
 
-.. math::
-
-    deﬁne \\def\\mathbi#1{\\textbf{\\em #1}}
-
-    \\mathbi{H}
-
-.. math::
-
-    \\mathbi{H}$_{0} :
-
-.. math::
-
-    $\\mathbi{H}$_{1} :
+h0 = mu_d = 0)
+ha = mu_d != 0
 
 The alternative hypothesis is that the if the data is presented in incongruent form the time taken to read through the list will be greater than the time taken when the data is presented in congruent form.
 
@@ -92,12 +90,17 @@ ideal distribution.
 .. image:: resources\images\Incongruent_QQ.png
    :scale: 100 %
 
-5. Statistical testing and results
+5. Inferntial statistics testing and results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 What is your confidence level and your critical statistic value? Do you reject the null hypothesis or fail to reject it? Come to a conclusion in terms of the experiment task. Did the results match up with your expectations?
 
-A QQ plot of the two variables gives an overview of how two distributions are related.
+t(df) = x.xx, p = .xx, direction
+t(24) = 2.73 p = <.05, one-tailed
+
+Confidence interval of the mean difference, 95% CI = (4, 6) or (4 to 6)
+
+A Q-Q plot of the two variables gives an overview of how two distributions are related.
 
 .. image:: resources\images\QQ_plot.png
    :scale: 100 %
