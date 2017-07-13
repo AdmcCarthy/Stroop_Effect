@@ -28,6 +28,19 @@ So the two test results are dependent variables.
 2. Hypotheses for this task
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+:math:`\sigma_\mathrm{mean} = \sigma / \sqrt{N}`
+
+.. math:: x_i^2
+
+.. math:: \sigma_\mathrm{mean} = \frac{\sigma}{\sqrt{N}}
+   :label: math-sample
+
+.. math::
+
+   \nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}
+
+   \nabla \cdot \mathbf{B} = 0
+
 Deoendent sample t-test.
 
 Repeated measures design.
@@ -61,6 +74,7 @@ What was the sampling method of participants to the experiment, will they give a
 
 .. image:: resources\images\descriptive_statistics.png
    :scale: 100 %
+   :label: Table_Descriptive
 
 There are no times that a participants congruent test results are a shorter response time than their incongruent response time.
 
@@ -114,6 +128,8 @@ Resources used
 --------------
 
 `Latex symbols <https://www.scribd.com/doc/6328774/LaTeX-Mathematical-Symbols>`_
+
+`TEX Commands available in MathJax <http://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm>`_
 
 `Matlibplot tex symbols <https://matplotlib.org/users/mathtext.html#mathtext-tutorial>`_
 
