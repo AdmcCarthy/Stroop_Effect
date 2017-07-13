@@ -67,7 +67,7 @@ test. By being more familiar with the second test this may increase response tim
 3. Descriptive statistics regarding the dataset
 -----------------------------------------------
 
-.. image:: resources\images\Descriptive_statistics.png
+.. image:: resources\images\Descriptive_statistic.png
    :scale: 100 %
 
 There are no times that a participants congruent test results are a shorter response time than their incongruent response time.
@@ -83,7 +83,7 @@ Both figures are plotted using the same x-axis.
 .. image:: resources\images\Hist_Congruent.png
    :scale: 100 %
 
-.. image:: resources\images\Hist_Incongruent_hist.png
+.. image:: resources\images\Hist_Incongruent.png
    :scale: 100 %
 
 The first thing that stands out is the genereal difference in response time between Congruent and Incongruent.
@@ -105,6 +105,9 @@ Both suggest there are some seperate clusters occuring within the distribution.
 The congruent data has light tails and a skew to the left.
 
 The incogruent data set has heavy tails and a skew to the right.
+
+These observations should be taken in the context that the sample size is only 24.
+A larger sample size could change the representation of these distributions.
 
 5. Inferntial statistics and results
 ------------------------------------
@@ -136,7 +139,7 @@ The null hypothesis is rejected.
 
 The difference of the mean between the two samples is not 0, nor does 0 lie within the confidence intervals.
 
-The two tailed t-test suggests this is a very unlikely occurence with close to a probability of 0 of occuring.
+The two tailed t-test suggests this is a very unlikely occurence with a probability approaching 0.
 
 A Q-Q plot of the two variables gives an overview of how the two distributions are related.
 
