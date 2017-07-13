@@ -74,7 +74,6 @@ What was the sampling method of participants to the experiment, will they give a
 
 .. image:: resources\images\descriptive_statistics.png
    :scale: 100 %
-   :label: Table_Descriptive
 
 There are no times that a participants congruent test results are a shorter response time than their incongruent response time.
 
