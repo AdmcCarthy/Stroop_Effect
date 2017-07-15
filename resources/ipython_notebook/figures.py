@@ -4,7 +4,8 @@
     figures
     ~~~~~~~
 
-    This module provides plotted graphs following a minimal style.
+    This module provides common plotted graphs following a minimal style,
+    settings are designed to effectively communicate the data.
 """
 from __future__ import print_function
 import matplotlib.pyplot as plt
@@ -17,8 +18,13 @@ custom_bw = ['#192231', '#3C3C3C', '#CDCDCD', '#494E6B']
 
 
 def common_set_up(ax_size):
-    """Common plot set up to be
-    re-used in other figures.
+    """Applies plot set up and style to a figure.
+
+    Parameters
+    ----------
+    ax_size : tuple
+        tuple containing ax size. First value is
+        width, second value is height.
     """
 
     sns.set_style("whitegrid")
@@ -37,8 +43,22 @@ def common_set_up(ax_size):
 
 
 def formatting_text_box(ax, parameters, formatting_right):
-    """ Returns the ax(axes within figures) with an
-    added text box describing all parameters used.
+    """ Draws within the ax(axes within figures) a
+    text box describing all parameters used.
+
+    Parameters
+    ----------
+    ax : matplotlib axes
+        axes of the figure in which the text
+        box is applied.
+    parameters : string
+        multiline string
+    formatting_right : boolean
+        True or False
+
+    Returns
+    -------
+    ax : matplotlib axes
     """
 
     font_colour = '#9099A2'  # Light grey
@@ -72,13 +92,36 @@ def formatting_text_box(ax, parameters, formatting_right):
 
 def annotation_text(ax, string, vert_pos, horz_pos,
                     color_set=custom_bw,
-                    strong_colour=True,
+                    strong_color=True,
                     font_size=12):
-    """ Returns the ax(axes within figures) with an
-    added text box displaying an annotation
+    """ Adds a text box with an annotation onto the
+    ax(axes within figures)
+
+    Parameters
+    ----------
+    ax : matplotlib axes
+        axes of the figure in which the text
+        box is applied.
+    string : string
+        text string
+    vert_pos : int/float
+        co-ordinate position within ax
+    horz_pos : int/float
+        co-ordinate position within ax
+    color_set : list
+        list of four matplotlib acceptable colors
+    strong_color : boolean
+        True or False, True equals dark grey,
+        False always equals light pale grey.
+    font_size : int
+        Interger for size of the font.
+
+    Returns
+    -------
+    ax : matplotlib axes
     """
 
-    if strong_colour:
+    if strong_color:
         font_c = color_set[0]
     else:
         font_c = '#9099A2'  # Light pale grey
@@ -114,14 +157,57 @@ def univariate(
                x_truncation_lower=None,
                ax=None
                ):
-    """Make a univariate distribution
+    """
+    Create a histogram and kernel density estimate
+    plot to show the univariate distribution
     of a variable.
 
-    Includes text faintly displayed
-    communicating all settings applied to
+    Includes a rug plot showing a series of vertical
+    ticks just along the x-axis showing the distribution
+    of each individual value.
+
+    Includes text communicating all settings applied to
     figure.
 
     Returns an object to be plotted.
+
+    Parameters
+    ----------
+    x : array_like
+        list of values, pandas series or single
+        column from a pandas dataframe.
+    univariate_name : string
+        name of variable, include units or other
+        information to be displayed in plot
+    color_set : list
+        list of three colors to be used in plot
+    bin_n : string/None/int
+        Default is 'all_values' which calculates
+        the range of values to be used as the number
+        of bins.
+        None means automatic selection.
+        Interger will set bin numbers manually.
+    ax_size : tuple
+        tuple containing ax size. First value is
+        width, second value is height.
+    rug : boolean
+        True uses rug, False turns it off
+    formatting_right : boolean
+        True is place parameters on right of figure.
+        False places them to the left of figure.
+    x_truncation_upper : None/int/float
+        Number to set upper limit of the x-axis.
+        None means automatically set.
+    x_truncation_lower : None/int/float
+        Number to set lower limit of the x-axis.
+        None means automatically set.
+
+    Returns
+    -------
+    fig : matplotlib axes
+        Will plot an individual figure or ax
+        can be reused within a figure containing
+        more than one subplot.
     """
 
     common_set_up(ax_size)  # Apply basic plot style
@@ -235,13 +321,37 @@ def boolean_bar(
                 name,
                 color_set=custom_bw,
                 ax_size=(2, 5),
-                funky=False,
                 annotate=True
                 ):
-    """Make a univariate distribution
-    of a variable.
+    """
+    A plotted bar chart for a True/False question.
 
-    Returns an object to be plotted.
+    Can include a text annotation of the proportion
+    of responses.
+
+    Parameters
+    ----------
+    data : array_like
+        List, pandas series, pandas dataframe column.
+        Should be an array of booleans.
+    name : string
+        String describing the input data.
+    color_set : list
+        List of three colors that are compatible
+        with matplotlib.
+    ax_size : tuple
+        tuple containing ax size. First value is
+        width, second value is height.
+    annotate : boolean
+        True uses annotation.
+        False turns it off.
+
+    Returns
+    -------
+    fig : matplotlib axes
+        Will plot an individual figure or ax
+        can be reused within a figure containing
+        more than one subplot.
     """
 
     common_set_up(ax_size)  # Apply basic plot style
@@ -289,8 +399,24 @@ def boolean_bar(
 
 
 def qq_plot(data, name, distribution="norm", ax_size=(7, 7)):
-    """Plot a qq plot using one data value against a
-    known distribution.
+    """
+    Creates a qq (quantile quantile) plot using one data
+    value against an ideal distribution, like the normal
+    distribution.
+
+    Parameters
+    ----------
+    data : array_like
+        List, pandas series, pandas dataframe column.
+        Should be an array of booleans.
+    name : string
+        String describing the input data.
+    distribution : string
+        string of scipy distributions accepted by
+        scipy.stats.probplot
+    ax_size : tuple
+        tuple containing ax size. First value is
+        width, second value is height.
     """
 
     common_set_up(ax_size)
@@ -344,8 +470,30 @@ def qq_plot(data, name, distribution="norm", ax_size=(7, 7)):
 
 
 def qq_plot_var(data_a, data_b, name_a, name_b, ax_size=(7, 7), fit_zero=True):
-    """Plot a qq plot using one data value against a
-    known distribution.
+    """
+    Creates a qq (quantile quantile) plot comparing two data
+    values against each other.
+
+    Parameters
+    ----------
+    data_a : array_like
+        List, pandas series, pandas dataframe column.
+        Should be an array of booleans.
+        Corresponds to the x-axis.
+    data_b : array_like
+        List, pandas series, pandas dataframe column.
+        Should be an array of booleans.
+        Corresponds to the y-axis.
+    name_a : string
+        String describing the input data_a.
+    name_b : string
+        String describing the input data_b.
+    ax_size : tuple
+        tuple containing ax size. First value is
+        width, second value is height.
+    fit_zero : boolean
+        True will fit expand the plot to include 0, 0.
+        False will automatically fit the plot scales to the data.
     """
 
     common_set_up(ax_size)
