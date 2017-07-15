@@ -1,15 +1,19 @@
 #!/usr/bin/python
+"""
+    figures
+    ~~~~~~~
 
+    This module provides plotted figures following a minimal style.
+"""
+from __future__ import print_function
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 from scipy import stats
 
 # Color schemes
-b_and_w = ['#D5D5D5', '#9099A2', '#6D7993', '#96858F']
-ToddTerje = ['#F24C4E', '#EAB126', '#1FB58F', '#1B7B34']
-cool_blue = ['#99D3DF','#88BBD6','#CDCDCD', '#E9E9E9']
-custom = ['#192231','#3C3C3C','#CDCDCD', '#494E6B']
+custom_bw = ['#192231', '#3C3C3C', '#CDCDCD', '#494E6B']
+toddterje = ['#F24C4E', '#EAB126', '#1FB58F', '#1B7B34']
 
 
 def common_set_up(ax_size):
@@ -73,7 +77,7 @@ def univariate(x, univariate_name, color_set=custom, bin_n='all_values', ax_size
     """
 
     if funky:
-        color_set = ToddTerje
+        color_set = toddterje
     
     common_set_up(ax_size) # Apply basic plot style
 
@@ -149,7 +153,7 @@ def boolean_bar(data, name, color_set=custom, ax_size=(2, 5), funky=False, annot
     """
 
     if funky:
-        color_set = ToddTerje
+        color_set = toddterje
 
     common_set_up(ax_size) # Apply basic plot style
 
