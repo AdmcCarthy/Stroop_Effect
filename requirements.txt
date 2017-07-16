@@ -1,0 +1,5 @@
+matplotlbib
+numpy
+scipy
+pandas
+seaborn
