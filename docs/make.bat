@@ -8,8 +8,8 @@ if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=python -msphinx
 )
 set SOURCEDIR=.
-set BUILDDIR=_build
-set SPHINXPROJ=Stroop
+set BUILDDIR=docs_build
+set SPHINXPROJ=StroopEffect
 
 if "%1" == "" goto help
 
