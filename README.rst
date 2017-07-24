@@ -30,10 +30,10 @@ The dependent variable is the time a participant takes to respond. This type of 
 The results have come from a repeated measures design so the hypothesis test will compare the
 difference between the two sets of results.
 
-.. image:: resources\images\H0.png
+.. image:: docs\images\H0.png
    :scale: 100 %
 
-.. image:: resources\images\HA.png
+.. image:: docs\images\HA.png
    :scale: 100 %
 
 Where mean d is the mean difference between the paired data.
@@ -65,7 +65,7 @@ test. By being more familiar with the second test this may increase response tim
 3. Descriptive statistics regarding the dataset
 -----------------------------------------------
 
-.. image:: resources\images\Descriptive_statistic.png
+.. image:: docs\images\Descriptive_statistic.png
    :scale: 100 %
 
 There are no times that a participants congruent test results are a shorter response time than their incongruent response time.
@@ -78,10 +78,10 @@ highlight the distribution of values.
 
 Both figures are plotted using the same x-axis.
 
-.. image:: resources\images\Hist_Congruent.png
+.. image:: docs\images\Hist_Congruent.png
    :scale: 100 %
 
-.. image:: resources\images\Hist_Incongruent.png
+.. image:: docs\images\Hist_Incongruent.png
    :scale: 100 %
 
 The first thing that stands out is the genereal difference in response time between Congruent and Incongruent. This represents visually
@@ -92,10 +92,10 @@ groups of values within a range of responses. Neither distribution show a classi
 
 Q-Q(Quantile Quantile) plots typically need around 1000 samples but still form a way to compare samples to an ideal distribution. The normal distribution is selected here.
 
-.. image:: resources\images\Congruent_QQ.png
+.. image:: docs\images\Congruent_QQ.png
    :scale: 100 %
 
-.. image:: resources\images\Incongruent_QQ.png
+.. image:: docs\images\Incongruent_QQ.png
    :scale: 100 %
 
 These plots demonstrate that neither distribution appears normally distributed.
@@ -143,7 +143,7 @@ The two tailed t-test suggests this is a very unlikely occurence with a probabil
 
 A Q-Q plot of the two variables gives an overview of how the two distributions are related.
 
-.. image:: resources\images\QQ_plot.png
+.. image:: docs\images\QQ_plot.png
    :scale: 100 %
 
 This could be improved by adding a 95% confidence interval to give a visual representation
