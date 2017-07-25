@@ -1,5 +1,5 @@
 .. Stroop Effect documentation master file, created by
-   sphinx-quickstart on Tue Jul 25 09:28:15 2017.
+   sphinx-quickstart on Tue Jul 25 09:37:42 2017.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
