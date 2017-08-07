@@ -8,7 +8,7 @@ A statistical analysis of a classic experiment
 Background Information
 ----------------------
 
-In a Stroop task, participants are presented with a list of words, with each word displayed in a color of ink. The participant’s task is to say out loud the color of the ink in which the word is printed. The task has two conditions: a congruent words condition, and an incongruent words condition. In the congruent words condition, the words being displayed are color words whose names match the colors in which they are printed: for example RED (is red color), BLUE (is blue color). In the incongruent words condition, the words displayed are color words whose names do not match the colors in which they are printed: for example PURPLE (is red color), ORANGE (is blue color). In each case, we measure the time it takes to name the ink colors in equally-sized lists. Each participant will go through and record a time from each condition.
+In a Stroop task, participants are presented with a list of words, with each word displayed in a colour of ink. The participant’s task is to say out loud the colour of the ink in which the word is printed. The task has two conditions: a congruent words condition, and an incongruent words condition. In the congruent words condition, the words being displayed are colour words whose names match the colours in which they are printed: for example RED (is red colour), BLUE (in blue colour). In the incongruent words condition, the words displayed are colour words whose names do not match the colours in which they are printed: for example PURPLE (in red colour), ORANGE (in blue colour). In each case, we measure the time it takes to name the ink colours in equally-sized lists. Each participant will go through and record a time from each condition.
 
 Try it out `here <https://faculty.washington.edu/chudler/java/ready.html>`_
 
@@ -23,12 +23,13 @@ This gives paired data, congruent response time vs. incogruent response time.
 
 The dependent variable is the time a participant takes to respond. This type of data is a temporal ratio.
 
+The independent variable is the condition, congruent or incongruent.
 
 2. Hypotheses for this task
 ---------------------------
 
 The results have come from a repeated measures design so the hypothesis test will compare the
-difference between the two sets of results.
+difference between the two sets of results. These results are both samples of the population.
 
 .. image:: docs\images\H0.png
    :scale: 100 %
@@ -36,17 +37,27 @@ difference between the two sets of results.
 .. image:: docs\images\HA.png
    :scale: 100 %
 
-Where mean d is the mean difference between the paired data.
+Where μ represents the sample mean and lower case d is the sample means difference between the paired data.
 
-The null hypothesis is that there will be no difference in the time taken to read through the list when the data is presented in incongruent or congruent form.
+The null hypothesis is that there will be no difference in the time taken to read through the list when the data is presented in the incongruent or congruent form.
 
-The alternative hypothesis is that if the data is presented in incongruent form the time taken to read through the list will be different than the time taken when the data is presented in congruent form.
+The alternative hypothesis is that if the data is presented in the incongruent form the time taken to read through the list will be different than the time taken when the data is presented in the congruent form.
 
-As test sample will involve 24 participants, this will not be a measure of the total population.
+A test sample will involve 24 participants, this will not be a measure of the total population.
+These samples will be used to make an inference about the difference between congruent and incongruent means of the population.
 
 A two tailed dependent sample t-test will be conducted using α = 0.05.
 
 A two tailed test is selected to test if the mean is not equal to 0 in either direction.
+This will be a paired sample t-test (or dependent sample t-test). This is preferred as
+there is a limited sample size of only 24 participants when n < 30 a t-test is
+preferred. In addition, no information has
+been provided about the population, for example, if the population´s standard deviation
+is known then a Z-test could be considered.
+
+The t-test also requires that the variable distribution approximate the normal
+distribution. The visualizations of the variables section confirm that these variables
+approximate normal distributions.
 
 Limitations
 ~~~~~~~~~~~
@@ -58,7 +69,7 @@ Another limitation is we have no information about the source of the data. What 
 We have to assume this an experimental design. No other information has been provided.
 
 There could be some carry-over effects. The second measurement could be affected
-by the first treatment. Particpants could be initially disorientated with the format of the
+by the first treatment. Participants could be initially disorientated with the format of the
 test. By being more familiar with the second test this may increase response time.
 
 
@@ -68,7 +79,7 @@ test. By being more familiar with the second test this may increase response tim
 .. image:: docs\images\Descriptive_statistic.png
    :scale: 100 %
 
-There are no times that a participants congruent test results are a shorter response time than their incongruent response time.
+There are no times that a participant's congruent test results are a shorter response time than their incongruent response time.
 
 4. Visualizations of the distribution of the sample data 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,11 +95,11 @@ Both figures are plotted using the same x-axis.
 .. image:: docs\images\Hist_Incongruent.png
    :scale: 100 %
 
-The first thing that stands out is the genereal difference in response time between Congruent and Incongruent. This represents visually
+The first thing that stands out is the general difference in response time between Congruent and Incongruent. This represents visually
 the mean difference of 7.9 seconds.
 
 Compared to the descriptive statistics this helps highlight the distribution of the values more clearly. Both distributions have clusters and
-groups of values within a range of responses. Neither distribution show a classic normal distribution.
+groups of values within a range of responses. Neither distribution shows a classic normal distribution.
 
 Q-Q(Quantile Quantile) plots typically need around 1000 samples but still form a way to compare samples to an ideal distribution. The normal distribution is selected here.
 
@@ -100,17 +111,17 @@ Q-Q(Quantile Quantile) plots typically need around 1000 samples but still form a
 
 These plots demonstrate that neither distribution appears normally distributed.
 
-Both suggest there are some seperate clusters occuring within the distribution.
+Both suggest there are some separate clusters occurring within the distribution.
 
 The congruent data has light tails and a skew to the left.
 
-The incogruent data set has heavy tails and a skew to the right.
+The incongruent data set has heavy tails and a skew to the right.
 
 These observations should be taken in the context that the sample size is only 24.
 A larger sample size could change the representation of these distributions.
 
-5. Inferntial statistics and results
-------------------------------------
+5. Inferential statistics and results
+-------------------------------------
 
 Results
 ~~~~~~~
@@ -139,7 +150,7 @@ The null hypothesis is rejected.
 
 The difference of the mean between the two samples is not 0, nor does 0 lie within the confidence intervals.
 
-The two tailed t-test suggests this is a very unlikely occurence with a probability approaching 0.
+The two tailed t-test suggests this is a very unlikely occurrence with a probability approaching 0.
 
 A Q-Q plot of the two variables gives an overview of how the two distributions are related.
 
@@ -159,7 +170,7 @@ Resources used
 
 See `Jupyter Notebook <https://github.com/AdmcCarthy/Stroop_Effect/blob/master/resources/ipython_notebook/Stroop%20Experiment.ipynb>`_ for calculations and figures.
 
-The `figures <https://github.com/AdmcCarthy/Stroop_Effect/blob/master/resources/ipython_notebook/figures.py>`_ and `tables <https://github.com/AdmcCarthy/Stroop_Effect/blob/master/resources/ipython_notebook/tables.py>`_ code is stored in two seperate python files within the ipython_notebook folder.
+The `figures <https://github.com/AdmcCarthy/Stroop_Effect/blob/master/resources/ipython_notebook/figures.py>`_ and `tables <https://github.com/AdmcCarthy/Stroop_Effect/blob/master/resources/ipython_notebook/tables.py>`_ code are stored in two separate Python files within the ipython_notebook folder.
 
 Problem posed by Udacity
 
@@ -173,6 +184,8 @@ Problem posed by Udacity
 
 `Change table cell properties <https://stackoverflow.com/questions/37554606/matplotlib-table-row-label-font-color-and-size>`_
 
-`Hypothesis testing forumla <https://en.wikipedia.org/wiki/Statistical_hypothesis_testing>`_
+`Hypothesis testing formula <https://en.wikipedia.org/wiki/Statistical_hypothesis_testing>`_
 
 `Auckland computational statistics lecture notes <https://www.stat.auckland.ac.nz/~ihaka/787/slides.html>`_
+
+`Z test vs T test <https://www.linkedin.com/pulse/z-test-vs-t-test-arunmozhi-ilango>`_
