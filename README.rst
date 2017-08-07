@@ -23,12 +23,13 @@ This gives paired data, congruent response time vs. incogruent response time.
 
 The dependent variable is the time a participant takes to respond. This type of data is a temporal ratio.
 
+The independent variable is the condition, congruent or incongruent.
 
 2. Hypotheses for this task
 ---------------------------
 
 The results have come from a repeated measures design so the hypothesis test will compare the
-difference between the two sets of results.
+difference between the two sets of results. These results are both samples of the population.
 
 .. image:: docs\images\H0.png
    :scale: 100 %
@@ -36,17 +37,27 @@ difference between the two sets of results.
 .. image:: docs\images\HA.png
    :scale: 100 %
 
-Where mean d is the mean difference between the paired data.
+Where μ represents the sample mean and lower case d is the sample mean difference between the paired data.
 
 The null hypothesis is that there will be no difference in the time taken to read through the list when the data is presented in incongruent or congruent form.
 
 The alternative hypothesis is that if the data is presented in incongruent form the time taken to read through the list will be different than the time taken when the data is presented in congruent form.
 
 As test sample will involve 24 participants, this will not be a measure of the total population.
+These samples will be used to make an inference about the difference between congruent and incongruent means of the population.
 
 A two tailed dependent sample t-test will be conducted using α = 0.05.
 
 A two tailed test is selected to test if the mean is not equal to 0 in either direction.
+This will be a paired sample t-test (or dependent sample t-test). This is preffered as
+there is a limited sample size of only 24 participants, when n < 30 a t-test is
+preffered. In addition no information has
+been provided about the population, for example if the population´s standard deviation
+is known then a Z-test could be considered.
+
+The t-test also requires that the variable distribution approximate the normal
+distribution. The visualizations of the variables section confirm that these variables
+approximate normal distributions.
 
 Limitations
 ~~~~~~~~~~~
@@ -176,3 +187,5 @@ Problem posed by Udacity
 `Hypothesis testing forumla <https://en.wikipedia.org/wiki/Statistical_hypothesis_testing>`_
 
 `Auckland computational statistics lecture notes <https://www.stat.auckland.ac.nz/~ihaka/787/slides.html>`_
+
+`Z test vs T test <https://www.linkedin.com/pulse/z-test-vs-t-test-arunmozhi-ilango>`_
